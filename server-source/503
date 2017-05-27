@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>503 Service Unavailable: Chest drain insertion record audit (ward 3 procedure room only)</title>
+<meta name="author" content="Joel Schneider">
+<meta name="description" content="Chest drain insertion record software for ward 3 procedure room only">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1 class="title_503">503 Service Unavailable</h1>
+<div class="error_message">
+<span class="big_subtitle">Oh, no!</span> <p>Something bad just happened<p>
+<p> (If the server gave a more specific error message, it will be here &#10151; <i>@useless_error_message</i> </p>
+<p> Hopefully it's just a transient blip; you might like to try going back to the <a href="/">homepage</a>?</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Chest drain insertion record audit (ward 3 procedure room only)</title>
+<meta name="author" content="Joel Schneider">
+<meta name="description" content="Chest drain insertion record software for ward 3 procedure room only">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/JavaScript" src="script.js"></script>
+</head>
+<body>
+<div class="rightside"><a class="first" href="/">Home</a><a href="/edit">New</a><a href="/list">List all</a><a href="help">Help</a></div>
+<h1>Chest drain insertion record audit (ward 3 procedure room)</h1>
+<div class="infobox">
+Welcome to the chest drain audit record software. With it, you can:
+<ul>
+<li>create <a class="big" href="/edit">new</a> records,</li>
+<li>list all the <a href="/list">current records</a>, and</li>
+<li>edit records</li>
+</ul>
+</div>
+</body>
+</html>

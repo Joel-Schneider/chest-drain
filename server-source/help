@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<title> Chest drain insertion record audit (ward 3 procedure room only) </title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="rightside"><a class="first" href="/">Home</a><a href="/edit">New</a><a href="/list">List all</a><a href="help">Help</a></div>
+<h1> Help - JCRr </h1>
+<p> This is the <i>Chest drain insertion record audit</i> software - currently for use in the <i>ward 3 procedure room only</i>. 
+Need technical information about this software? Contact Joel Schneider (4<sup>th</sup> year medical student whose project this is) on: j.m.schneider AT dundee DOT ac DOT uk. Contact him or Dr Anderson (respiratory consultant) for more info on the audit itself. </p>
+</body>
+</html>

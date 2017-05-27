@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Chest drain insertion record audit (ward 3 procedure room only)</title>
+<meta name="author" content="Joel Schneider">
+<meta name="description" content="Chest drain insertion record software for ward 3 procedure room only">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/JavaScript" src="script.js"></script>
+</head>
+<body onLoad="calibrate()">
+<div id="main_page">
+<div class="rightside"><a class="first" href="/">Home</a><a href="/edit">New</a><a href="/list">List all</a><a href="help">Help</a></div>
+<h1>Chest drain insertion record audit (ward 3 procedure room)</h1>
+<!--name="drain_data_form"--><form action="http://localhost:8080/add" method="post" id="drain_data_form" onsubmit="javascript:return check_form();" accept-charset=utf-8>
+<input type=hidden id=patientID name=patientID value="@patientID">
+<div class="box">
+	<span class="group"><label for="Name" accesskey=p><u>P</u>atient name:</label> <input type=text id="Name" name="Name" value="@Name"> </span>
+	<span class="group"><label for="CHInumber" accesskey=c><u>C</u>HI:</label> <input type=text id="CHInumber" name="CHInumber" value="@CHInumber"> </span>
+	<span class="group sub_tooltip">
+	Consent: <input type=radio name="consent" value="verbal" id="@verbal"><label for="verbal" accesskey=v><u>V</u>erbal</label>
+	<input type=radio name="consent" value="written" id="@written"><label for="written" accesskey=w><u>W</u>ritten</label>
+	<input type=radio name="consent" value="na" id="@na"><label for="na">N/A</label>
+	<span>Written consent is recommended</span></span>
+</div>
+<h2>Pre-procedure:</h2>
+<div class="box">
+<span class="group"><label for="indication" accesskey=i><u>I</u>ndication(s):</label>
+<span class="sub_tooltip"><input type=text id="indication" name="indication" value="@indication">
+<span>
+(Not exhaustive) e.g.:<br>
+chylothorax<br>
+empyema<br>
+haemothorax<br>
+pleural effusion<br>
+pneumothorax<br>
+tension pneumothorax
+</span></span>
+ </span>
+<span class="wrapablegroup"><span class="nowrap">Position confirmation pre-procedure: </span> <span class="nowrap"> <input type=checkbox name="clinical" id="@clinical"><label for="clinical" accesskey=n>Cli<u>n</u>ical</label>
+<input type=checkbox name="radiological" id="@radiological"><label for="radiological" accesskey=a>R<u>a</u>diological</label></span> </span>
+</div>
+<h2>Procedure:</h2>
+<div class="box">
+<span class="group">Side: <input type=checkbox name="left" id="@left"><label for="left" accesskey=l><u>L</u>eft</label>
+<input type=checkbox name="right" id="@right"><label for="right" accesskey=r><u>R</u>ight</label></span>
+<span class="group"><label for="patientposition" accesskey=o>Patient p<u>o</u>sition:</label> 
+<span class="sub_tooltip"><input type=text id="patientposition" name="patientposition" value="@patientposition">
+<span>e.g. left lateral supine</span></span> </span>
+<span class="group"><label for="drainsite" accesskey=d><u>D</u>rain site:</label> 
+<span class="sub_tooltip"><input type=text id="drainsite" name="drainsite" value="@drainsite">
+<span>e.g. 5<sup>th</sup> intercostal space, mid-axillary line</span></span> </span>
+<span class="group">Type: <input type=radio name="accesstechnique" id="seldinger" value="@seldinger"><label for="seldinger" accesskey=e>S<u>e</u>ldinger</label>
+<input type=radio name="accesstechnique" id="surgical" value="@surgical"><label for="surgical" accesskey=u>S<u>u</u>rgical</label></span>
+<span class="group"><input type=radio name="urgency" id="elective" value="@elective"><label for="elective" accesskey=t>Elec<u>t</u>ive</label>
+<input type=radio name="urgency" id="emergency" value="@emergency"><label for="emergency" accesskey=m>E<u>m</u>ergency</label></span>
+
+<span class="group"><label for="drainsize" accesskey=z>Drain si<u>z</u>e:</label> <input type=text size="2" id="drainsize" name="drainsize" value="@drainsize">F </span>
+<span class="group"><input type=checkbox name="ultrasoundguided" id="@ultrasoundguided"><label for="ultrasoundguided" accesskey=g>Ultrasound-<u>g</u>uided</label></span>
+
+<span class="group"><span class="sub_tooltip"><label for="aseptictechnique" accesskey="*"><input type=checkbox name="aseptictechnique" id="@aseptictechnique">Aseptic technique<sup><u>*</u></sup></label><span>Hands washed; sterile gloves, gown &amp; field; antiseptic site preparation.</span></span></span>
+
+<span class="group"><label for="sutureclosuretechnique" accesskey=q>Suture closure techni<u>q</u>ue:</label>
+<span class="sub_tooltip"><input type=text id="sutureclosuretechnique" name="sutureclosuretechnique" value="@sutureclosuretechnique">
+<span>preferably not purse-string</span></span> </span>
+
+
+
+<span class="group"><input type=checkbox name="localanaesthetic" id="@localanaesthetic"><label for="localanaesthetic" accesskey=h>Local anaest<u>h</u>etic</label></span>
+<span class="group"><label for="premedicationantibiotics" accesskey=b>Premedication/anti<u>b</u>iotics:</label> <input type=text id="premedicationantibiotics" name="premedicationantibiotics" value="@premedicationantibiotics"> </span>
+</div>
+
+<h2>Post-procedure:</h2>
+<div class="box">
+<span class="group"><input type=checkbox name="drainclamped" id="@drainclamped"><label for="drainclamped" accesskey=" ">Drain<u> </u>clamped</label></span>
+<span class="group"><input type=checkbox name="suction" id="@suction"><label for="suction" accesskey=s><u>S</u>uction</label></span>
+<span class="group"><input type=checkbox name="fluttervalve" id="@fluttervalve"><label for="fluttervalve" accesskey=f><u>F</u>lutter valve</label></span>
+<span class="group"><span class="sub_tooltip"><label for="underwaterseal" accesskey="^"><input type=checkbox name="underwaterseal" id="@underwaterseal">Underwater seal<sup><u>^</u></sup></label><span>It must be swinging with inspiration/expiration</span></span></span>
+<span class="group"><input type=checkbox name="cxrpost" id="@cxrpost"><label for="cxrpost" accesskey=x>C<u>X</u>R requested to confirm position</label></span>
+<span class="group"><label for="additionalnotes" accesskey=":">Additional notes<u>:</u></label> 
+<span class="sub_tooltip"><input type=text id="additionalnotes" name="additionalnotes" value="@additionalnotes">
+<span>e.g. why written consent wasn't obtained,<br>
+why a non-standard site/technique was used</span></span> </span>
+<span class="group"><label for="earlycomplications">Early complications:</label>
+<span class="sub_tooltip"><input type=text id="earlycomplications" name="earlycomplications" value="@earlycomplications">
+<span>e.g. pneumothorax, wrong site etc.</span></span> </span>
+</div>
+<h2>Drain inserted by:</h2>
+<div class="box">
+<span class="group"><label for="inserteename" accesskey=".">Dr<u>.</u> Name:</label> <input type=text id="inserteename" name="inserteename" value="@inserteename"></span>
+<span class="group"><label for="speciality" accesskey=y>Specialit<u>y</u>:</label> <input type=text id="speciality" name="speciality" value="@speciality"></span>
+<span class="group"><label for="grade">Grade:</label> <input type=text id="grade" name="grade" value="@grade"></span>
+<span class="group"><label for="insertdate">Date:</label> <input type=text id="insertdate" name="insertdate" value="@insertdate"> </span>
+<span class="group"><label for="inserttime">Time:</label> <input type=text id="inserttime" name="inserttime" size=5 value="@inserttime"> </span>
+<input type=hidden id=swversion name=swversion value="1.4">
+<input type=hidden id=versiondate name=versiondate value="26Dec2012"><!-- &#10008; cross (vs tick) -->
+<br><input type="reset" value="&#10226; Restart record" class="darkbutton" onclick="javascript:return reset_form();">
+<input type="submit" value="&#10004; Save record &amp; check printout" class="darkbutton submit_button">
+</div>
+</form>
+<div class="push"></div>
+</div>
+<div id="admin_box" class="admin_box hidden"><b>Admin: </b>
+<a id="clear_cookies" href="javascript:clear_cookies()">clear my details</a>
+<a id="remember_me" href="javascript:remember_me()">remember me</a>
+<a id="dont_remember_me" href="javascript:dont_remember_me()">don't remember me</a> (on this PC).
+</div>
+</body>
+</html>
